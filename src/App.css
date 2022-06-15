@@ -9,7 +9,11 @@
 }
 
 .hero {
-  margin: 0 10rem;
+  margin: 3rem 10rem;
 }
 .search-field {
+  margin: 5rem 1rem 10rem;
+}
+.search-field-ham {
+  margin: 3rem 1rem;
 }
