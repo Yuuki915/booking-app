@@ -40,8 +40,8 @@ function OffcanvasExample() {
 
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Hotels</Nav.Link>
-                  <Nav.Link href="#action2">Flights</Nav.Link>
+                  <Nav.Link href="#action1">Hotel</Nav.Link>
+                  <Nav.Link href="#action2">Flight</Nav.Link>
                 </Nav>
 
                 <Form className="search-field-ham d-flex">
