@@ -7,13 +7,10 @@ function FillExample() {
     <div className="hero">
       <Nav fill variant="tabs" defaultActiveKey="/home">
         <Nav.Item>
-          <Nav.Link href="/home">Hotels</Nav.Link>
+          <Nav.Link href="/hotels">Hotel</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-1">Flights</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-2">Link</Nav.Link>
+          <Nav.Link eventKey="link-1">Flight</Nav.Link>
         </Nav.Item>
       </Nav>
 
