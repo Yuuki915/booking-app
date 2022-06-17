@@ -14,7 +14,7 @@ export default function Header() {
       <Hotels />
       <Flights />
 
-      <HotelsDetail />
+      {/* <HotelsDetail /> */}
     </div>
   );
 }

@@ -1,4 +1,8 @@
 import { useState } from "react";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
+
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
@@ -17,16 +21,20 @@ function OffcanvasExample() {
 
   return (
     <>
-      <Navbar bg="light" expand={false}>
+      <Navbar expand={false} className="navBar">
         <Container fluid>
           <Navbar.Brand href="#">Booking App</Navbar.Brand>
 
           <div className="d-flex">
             <Nav.Link href="/auth/logout" onClick={() => setLogin(true)}>
-              {loginToggle}
+              <FontAwesomeIcon icon={faCircleUser} size="2x" />
+              {/* {loginToggle} */}
             </Nav.Link>
 
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} />
+            <Navbar.Toggle
+              aria-controls={`offcanvasNavbar-expand-false`}
+              className="border-0"
+            />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-false`}
               aria-labelledby={`offcanvasNavbarLabel-expand-false`}
