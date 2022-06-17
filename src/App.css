@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-.App {
+.home {
   text-align: center;
 }
 
@@ -14,8 +14,17 @@
   margin: 10rem auto;
 }
 
+/* .navBar {
+  background-color: rgb(94, 94, 224);
+ color: #fff;
+}
+ .navBar a.nav-link {
+ color: #fff;
+ } */
+
 .hero {
-  margin: 3rem 10rem;
+  /* background-color: #ffcc4e; */
+  padding: 3rem 10rem;
 }
 .search-field {
   margin: 5rem 1rem 10rem;
@@ -48,7 +57,7 @@
   transition: 0.3s;
 }
 .topPage-hotel:hover .topPage-img {
-  opacity: 0.5;
+  opacity: 0.2;
   z-index: -1;
 }
 .hotel-info-hover {

@@ -17,10 +17,16 @@ function FillExample() {
       <Form className="search-field d-flex">
         <Form.Control
           type="search"
-          placeholder="Search"
-          className="me-2"
+          placeholder="Where are you going?"
+          className="rounded-0 w-25"
           aria-label="Search"
         />
+        <div>
+          <span>date - date</span>
+        </div>
+        <div>
+          <span>2 adults 2 children 1 room</span>
+        </div>
         <Button variant="outline-success">Search</Button>
       </Form>
     </div>
