@@ -30,6 +30,7 @@ export default function Hotels() {
           <div className="topPage-hotel" key={hotel.key}>
             <a className="hotel-link" href="/">
               <img className="topPage-img" src={hotel.img} alt="" />
+              <p>{hotel.place}</p>
             </a>
 
             <div className="hotel-info-hover">
