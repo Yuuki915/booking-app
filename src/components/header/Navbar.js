@@ -19,17 +19,46 @@ function OffcanvasExample() {
     loginToggle = "login";
   }
 
+  const [openAuth, setOpenAuth] = useState(false);
+
   return (
     <>
       <Navbar expand={false} className="navBar">
         <Container fluid>
           <Navbar.Brand href="#">Booking App</Navbar.Brand>
 
-          <div className="d-flex">
-            <Nav.Link href="/auth/logout" onClick={() => setLogin(true)}>
-              <FontAwesomeIcon icon={faCircleUser} size="2x" />
-              {/* {loginToggle} */}
-            </Nav.Link>
+          <div className="nav-auth-icon d-flex">
+            <FontAwesomeIcon
+              className="mx-3"
+              icon={faCircleUser}
+              size="2x"
+              onClick={() => setOpenAuth(!openAuth)}
+            />
+            {openAuth && (
+              <div className="nav-auth">
+                <p className="my-2">
+                  <Nav.Link
+                    href={`/auth/${loginToggle}`}
+                    onClick={() => setLogin(true)}
+                    className="p-0 text-secondary"
+                  >
+                    {loginToggle}
+                  </Nav.Link>
+                </p>
+                <div className="auth-line"></div>
+                <p className="my-2">
+                  <Nav.Link
+                    href={`/auth/register`}
+                    className="p-0 text-secondary"
+                  >
+                    Register
+                  </Nav.Link>
+                </p>
+              </div>
+            )}
+            {/* <Nav.Link href="/auth/logout" onClick={() => setLogin(true)}>
+              {loginToggle}
+            </Nav.Link> */}
 
             <Navbar.Toggle
               aria-controls={`offcanvasNavbar-expand-false`}

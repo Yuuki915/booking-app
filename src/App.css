@@ -14,18 +14,87 @@
   margin: 10rem auto;
 }
 
-/* .navBar {
-  background-color: rgb(94, 94, 224);
- color: #fff;
+.nav-auth-icon {
+  position: relative;
+  align-items: center;
+  cursor: pointer;
 }
- .navBar a.nav-link {
- color: #fff;
- } */
+.nav-auth {
+  position: absolute;
+  bottom: -115px;
+  right: 1.5rem;
+  background-color: #fff;
+  width: 100px;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.auth-line {
+  width: 50%;
+  height: 2px;
+  background-color: rgb(108, 117, 125);
+  margin: 0 auto;
+}
 
 .hero {
-  /* background-color: #ffcc4e; */
   padding: 3rem 10rem;
+  position: relative;
 }
+.hero-text {
+  letter-spacing: 2px;
+}
+.form-container {
+  z-index: 1;
+}
+
+.cal {
+  position: relative;
+  cursor: pointer;
+}
+.calender {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  background-color: #fff;
+  z-index: 2;
+}
+.peopleOptions {
+  cursor: pointer;
+}
+.options {
+  position: absolute;
+  background-color: #fff;
+  width: 200px;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+.optionItem {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
+}
+.optionCounter {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.optionCounterButton {
+  width: 25px;
+  height: 25px;
+  border: 1px solid #333;
+  color: #333;
+  cursor: pointer;
+  background-color: white;
+}
+.optionCounterButton:disabled {
+  border-color: #ccc;
+  cursor: default;
+}
+
 .search-field {
   margin: 5rem 1rem 10rem;
 }
@@ -67,6 +136,7 @@
   border-radius: 20px;
   transition: 0.1s;
   z-index: -3;
+  cursor: pointer;
 
   position: absolute;
   top: 0;
@@ -86,6 +156,12 @@
   z-index: 100;
 }
 
+.hotel-link,
+.flight-link {
+  text-decoration: none;
+  color: #333;
+}
+
 .topPage-flight-container {
   display: flex;
   justify-content: center;
@@ -95,10 +171,6 @@
   margin: 1rem;
   /* background-color: royalblue; */
   border-radius: 20px;
-}
-.flight-link {
-  text-decoration: none;
-  color: #333;
 }
 .flight-info {
   /* color: #fff; */
