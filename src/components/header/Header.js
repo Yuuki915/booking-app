@@ -1,9 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar";
 import Hero from "../topPage/Hero";
-import Hotels from "../topPage/Hotels";
+import TopHotels from "../topPage/TopHotels";
 import Flights from "../topPage/Flights";
-import HotelsDetail from "../detailPage/HotelsDetail";
 
 export default function Header() {
   return (
@@ -11,10 +10,8 @@ export default function Header() {
       <Navbar />
       <Hero />
 
-      <Hotels />
+      <TopHotels />
       <Flights />
-
-      {/* <HotelsDetail /> */}
     </div>
   );
 }

@@ -1,13 +1,14 @@
 import { useState } from "react";
-import Nav from "react-bootstrap/Nav";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { DateRange } from "react-date-range";
 import { format } from "date-fns";
 import "react-date-range/dist/styles.css"; // main css file
 import "react-date-range/dist/theme/default.css"; // theme css file
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
+  const [destination, setDestination] = useState(" ");
   const [openCal, setOpenCal] = useState(false);
   const [bookingDate, setBookingDate] = useState([
     {
@@ -22,6 +23,7 @@ function Hero() {
     children: 0,
     room: 1,
   });
+
   const handleOption = (name, operation) => {
     setOptions((prev) => {
       return {
@@ -30,6 +32,13 @@ function Hero() {
       };
     });
   };
+
+  const navigate = useNavigate();
+
+  const handleSearch = () => {
+    navigate("/hotels", { state: { destination, bookingDate, options } });
+  };
+
   return (
     <div className="hero">
       {/* <Nav fill variant="tabs" defaultActiveKey="/home">
@@ -48,6 +57,7 @@ function Hero() {
           placeholder="Where are you going?"
           className="border-0 shadow-none w-25"
           aria-label="Search"
+          onChange={(e) => setDestination(e.target.value)}
         />
         <div className="cal">
           <span onClick={() => setOpenCal(!openCal)}>{`${format(
@@ -60,6 +70,7 @@ function Hero() {
               onChange={(item) => setBookingDate([item.selection])}
               moveRangeOnFirstSelection={false}
               ranges={bookingDate}
+              minDate={new Date()}
               className="calender"
             />
           )}
@@ -134,7 +145,11 @@ function Hero() {
             </div>
           )}
         </div>
-        <Button variant="outline-success" className="rounded-0">
+        <Button
+          variant="outline-success"
+          className="rounded-0"
+          onClick={handleSearch}
+        >
           Search
         </Button>
       </div>
