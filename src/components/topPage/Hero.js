@@ -41,20 +41,11 @@ function Hero() {
 
   return (
     <div className="hero">
-      {/* <Nav fill variant="tabs" defaultActiveKey="/home">
-        <Nav.Item>
-          <Nav.Link href="/hotels">Hotel</Nav.Link>
-        </Nav.Item>
-        <Nav.Item>
-          <Nav.Link eventKey="link-1">Flight</Nav.Link>
-        </Nav.Item>
-      </Nav> */}
-
-      <h1 className="hero-text my-5">Enjoy your trip!</h1>
+      <h1 className="hero-text my-5">Welcome to XIV</h1>
       <div className="form-container d-flex justify-content-between align-items-center p-2 border-bottom border-1 border-dark">
         <Form.Control
           type="search"
-          placeholder="Where are you going?"
+          placeholder="Whitch location?"
           className="border-0 shadow-none w-25"
           aria-label="Search"
           onChange={(e) => setDestination(e.target.value)}
