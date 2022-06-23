@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import Hero from "../topPage/Hero";
 import TopHotels from "../topPage/TopHotels";
-import Flights from "../topPage/Flights";
+// import Flights from "../topPage/Flights";
 
 export default function Header() {
   return (
@@ -11,7 +11,7 @@ export default function Header() {
       <Hero />
 
       <TopHotels />
-      <Flights />
+      {/* <Flights /> */}
     </div>
   );
 }
